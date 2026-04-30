@@ -1,0 +1,14 @@
+{
+  "name": "observability",
+  "description": "Observability skills for Claude Code — OpenTelemetry context propagation and related distributed tracing workflows.",
+  "version": "1.0.0",
+  "author": {
+    "name": "MetalBear",
+    "email": "support@metalbear.com",
+    "url": "https://metalbear.com"
+  },
+  "homepage": "https://metalbear.com",
+  "repository": "https://github.com/metalbear-co/observability-skills",
+  "license": "MIT",
+  "keywords": ["observability", "opentelemetry", "otel", "tracing", "metalbear"]
+}

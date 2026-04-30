@@ -1,0 +1,23 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "observability-skills",
+  "version": "1.0.0",
+  "description": "Skills for observability, tracing, and OpenTelemetry workflows by MetalBear",
+  "owner": {
+    "name": "MetalBear",
+    "email": "support@metalbear.com"
+  },
+  "plugins": [
+    {
+      "name": "observability",
+      "description": "Observability skills for Claude Code",
+      "source": "./",
+      "version": "1.0.0",
+      "category": "development",
+      "keywords": ["observability", "opentelemetry", "otel", "tracing", "propagators"],
+      "skills": [
+        "./skills/otel-propagators"
+      ]
+    }
+  ]
+}
