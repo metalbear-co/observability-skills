@@ -22,7 +22,7 @@ npx skills add metalbear-co/observability-skills
 
 | Skill | Description |
 |-------|-------------|
-| [otel-propagators](./skills/otel-propagators/) | Configure OpenTelemetry context propagation (OTEL_PROPAGATORS) for services |
+| [setup-otel-propagation](./skills/setup-otel-propagation/) | Configure OpenTelemetry context propagation (OTEL_PROPAGATORS) for services |
 
 ## Usage
 
@@ -35,10 +35,43 @@ Skills are automatically available once installed. The agent will use them when 
 
 ## Skill Structure
 
-Each skill contains:
-- `SKILL.md` - Instructions for the agent
-- `scripts/` - Helper scripts for automation (optional)
-- `references/` - Supporting documentation (optional)
+Each skill lives in its own directory under `skills/` and contains:
+
+- `SKILL.md` — frontmatter (`name`, `description`, `metadata`) plus instructions for the agent
+- `scripts/` — helper scripts for automation (optional)
+- `references/` — supporting documentation the agent can read (optional)
+
+```
+skills/
+└── setup-otel-propagation/
+    ├── SKILL.md
+    └── references/
+```
+
+## Adding a New Skill
+
+1. **Create the directory** — `mkdir skills/<your-skill-name>`.
+2. **Write `SKILL.md`** — start with frontmatter, then the body. The `name` must match the
+   directory name; the `description` is what the agent matches on to decide when to fire, so
+   make it specific (list trigger phrases, tools, env vars, error messages).
+   ```markdown
+   ---
+   name: your-skill-name
+   description: >
+     One paragraph telling the agent exactly when to invoke this skill...
+   metadata:
+     author: MetalBear
+     version: "0.1"
+   ---
+
+   # Skill Title
+   ...
+   ```
+3. **Register it** in [`.claude-plugin/marketplace.json`](./.claude-plugin/marketplace.json) by
+   adding `"./skills/<your-skill-name>"` to the `plugins[0].skills` array.
+4. **Document it** by adding a row to the *Available Skills* table above.
+5. **Bump the version** in `marketplace.json` and `.claude-plugin/plugin.json` if this is a
+   user-visible change.
 
 ## Contributing
 

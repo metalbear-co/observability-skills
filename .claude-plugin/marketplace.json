@@ -16,7 +16,7 @@
       "category": "development",
       "keywords": ["observability", "opentelemetry", "otel", "tracing", "propagators"],
       "skills": [
-        "./skills/otel-propagators"
+        "./skills/setup-otel-propagation"
       ]
     }
   ]

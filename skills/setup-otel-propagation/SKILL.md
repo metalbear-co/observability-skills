@@ -1,5 +1,5 @@
 ---
-name: otel-propagators
+name: setup-otel-propagation
 description: >
   Configure OpenTelemetry context propagation (OTEL_PROPAGATORS) for services running in Kubernetes,
   especially when using mirrord to intercept or steal traffic. Use this skill whenever the user
