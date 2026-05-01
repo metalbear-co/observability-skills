@@ -22,7 +22,7 @@ npx skills add metalbear-co/observability-skills
 
 | Skill | Description |
 |-------|-------------|
-| [setup-otel-propagation](./skills/setup-otel-propagation/) | Configure OpenTelemetry context propagation (OTEL_PROPAGATORS) for services |
+| [setup-otel-propagation](./skills/setup-otel-propagation/) | Configure OpenTelemetry context propagation (`OTEL_PROPAGATORS`) for services, especially when using mirrord. |
 
 ## Usage
 
